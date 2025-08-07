@@ -10,8 +10,18 @@ import NotFound from "./pages/NotFound";
 import AdminsOperators from "./pages/users/AdminsOperators";
 import Agents from "./pages/users/Agents";
 import ClinicStaff from "./pages/users/ClinicStaff";
-import TrainingCenters from "./pages/users/TrainingCenters";
+import UserTrainingCenters from "./pages/users/TrainingCenters";
 import WorkerRegistration from "./pages/workers/WorkerRegistration";
+import WorkerManagement from "./pages/workers/WorkerManagement";
+import WorkerProgress from "./pages/workers/WorkerProgress";
+import ClinicRegistration from "./pages/clinics/ClinicRegistration";
+import ClinicLicenses from "./pages/clinics/ClinicLicenses";
+import ClinicAudits from "./pages/clinics/ClinicAudits";
+import TrainingCenters from "./pages/TrainingCenters";
+import Approvals from "./pages/Approvals";
+import Integrations from "./pages/Integrations";
+import Reports from "./pages/Reports";
+import Settings from "./pages/Settings";
 
 const queryClient = new QueryClient();
 
@@ -45,12 +55,62 @@ const App = () => (
           } />
           <Route path="/users/training" element={
             <MainLayout>
-              <TrainingCenters />
+              <UserTrainingCenters />
             </MainLayout>
           } />
           <Route path="/workers/register" element={
             <MainLayout>
               <WorkerRegistration />
+            </MainLayout>
+          } />
+          <Route path="/workers/manage" element={
+            <MainLayout>
+              <WorkerManagement />
+            </MainLayout>
+          } />
+          <Route path="/workers/progress" element={
+            <MainLayout>
+              <WorkerProgress />
+            </MainLayout>
+          } />
+          <Route path="/clinics/register" element={
+            <MainLayout>
+              <ClinicRegistration />
+            </MainLayout>
+          } />
+          <Route path="/clinics/licenses" element={
+            <MainLayout>
+              <ClinicLicenses />
+            </MainLayout>
+          } />
+          <Route path="/clinics/audits" element={
+            <MainLayout>
+              <ClinicAudits />
+            </MainLayout>
+          } />
+          <Route path="/training-centers" element={
+            <MainLayout>
+              <TrainingCenters />
+            </MainLayout>
+          } />
+          <Route path="/approvals" element={
+            <MainLayout>
+              <Approvals />
+            </MainLayout>
+          } />
+          <Route path="/integrations" element={
+            <MainLayout>
+              <Integrations />
+            </MainLayout>
+          } />
+          <Route path="/reports" element={
+            <MainLayout>
+              <Reports />
+            </MainLayout>
+          } />
+          <Route path="/settings" element={
+            <MainLayout>
+              <Settings />
             </MainLayout>
           } />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
